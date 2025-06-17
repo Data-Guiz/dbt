@@ -1,32 +1,6 @@
 version: 2
 
 sources:
-  - name: dm
-    database: dev
-    schema: dm
-    tables:
-      - name: f_facts
-
-      - name: d_booking
-
-      - name: d_group
-
-      - name: d_item
-
-      - name: d_cruise
-
-      - name: d_booking__cruise
-
-      - name: d_booking__cruise__participant
-
-      - name: d_account_b2b
-
-      - name: d_person_account
-
-      - name: d_booking_participant
-
-      - name: d_fx_proforma
-
   - name: dwh
     database: dev
     schema: dwh
@@ -71,6 +45,39 @@ sources:
       - name: hub_fms_ssci
       - name: hub_fms_spr
       - name: hub_group
+      - name: hub_item
+      - name: hub_item_new
+      - name: hub_item_old
+      - name: hub_kardex
+      - name: hub_mm_cruise
+      - name: hub_mr_cabin_category
+      - name: hub_mr_cabin_number
+      - name: hub_mr_vessel
+      - name: hub_mr_vessel_configuration
+      - name: hub_mr_vessel_type
+      - name: hub_sf_account
+      - name: hub_sf_booking_line_item
+      - name: hub_sf_campaign
+      - name: hub_sf_campaignmember
+      - name: hub_sf_campaignsource
+      - name: hub_sf_case
+      - name: hub_sf_commercial_gesture
+      - name: hub_sf_contact
+      - name: hub_sf_cruise_scope
+      - name: hub_sf_deleted_campaign_members
+      - name: hub_sf_event
+      - name: hub_sf_household
+      - name: hub_sf_kardex
+      - name: hub_sf_lead
+      - name: hub_sf_opportunity
+      - name: hub_sf_passenger_roles
+      - name: hub_sf_recordtype
+      - name: hub_sf_subscription
+      - name: hub_sf_task
+      - name: hub_sf_user
+      - name: hub_ns_currency
+      - name: hub_ns_transaction
+      - name: hub_ns_transaction_line
       
 
       - name: hsat_cp_booking
@@ -87,6 +94,7 @@ sources:
       - name: link_sf_subscription__brand
       - name: lsat_cp_booking_cruise
       - name: link_booking__item__cruise__vessel__cabin
+
 
 
 
