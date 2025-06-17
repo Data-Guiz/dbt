@@ -78,6 +78,7 @@ sources:
       - name: hub_ns_currency
       - name: hub_ns_transaction
       - name: hub_ns_transaction_line
+      - name: hub_cuise
       
 
       - name: hsat_cp_booking
