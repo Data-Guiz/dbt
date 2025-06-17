@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: hub_booking
-    description: "Table hub des réservations"
+    description: "Table hub des reservations"
     columns:
       - name: booking_hk
         description: "Clef hash de la reservation"
@@ -21,7 +21,7 @@ models:
           - not_null
 
       - name: dv_run_id
-        description: "ID de l'execution"
+        description: "ID de l execution"
         tests:
           - not_null
 
@@ -51,7 +51,7 @@ models:
           - not_null
 
       - name: dv_run_id
-        description: "ID de l'execution"
+        description: "ID de l execution"
         tests:
           - not_null
 
@@ -62,37 +62,33 @@ models:
           - unique
 
   - name: hub_sf_account
-    description: ""
+    description: "Hub table for sf_account"
     columns:
       - name: sf_account_hk
-        description: "Clef hash"
+        description: "Hash key for sf_account"
         tests:
           - not_null
           - unique
-
       - name: load_dts
-        description: "Date de chargement"
+        description: "Load timestamp"
         tests:
           - not_null
-
       - name: record_source
-        description: "Source des donnees"
+        description: "Source system"
         tests:
           - not_null
-
       - name: dv_run_id
-        description: "ID de l'execution"
+        description: "Data Vault run ID"
         tests:
           - not_null
-
       - name: sf_account_bk
-        description: ""
+        description: "Business key for sf_account"
         tests:
           - not_null
           - unique
 
   - name: hub_budget_line
-    description: "Table hub des réservations"
+    description: "Table hub des reservations"
     columns:
       - name: budget_line_hk
         description: "Clef hash"
@@ -111,7 +107,7 @@ models:
           - not_null
 
       - name: dv_run_id
-        description: "ID de l'execution"
+        description: "ID de l execution"
         tests:
           - not_null
 
@@ -122,10 +118,10 @@ models:
           - unique
 
   - name: hub_cruise
-    description: "Table hub des croisières"
+    description: "Table hub des croisieres"
     columns:
       - name: cruise_hk
-        description: "Clé de hachage de la croisière"
+        description: "Clef de hachage de la croisiere"
         tests:
           - not_null
           - unique
@@ -134,15 +130,15 @@ models:
         tests:
           - not_null
       - name: record_source
-        description: "Source des données"
+        description: "Source des donnees"
         tests:
           - not_null
       - name: dv_run_id
-        description: "Identifiant d'exécution"
+        description: "Identifiant d execution"
         tests:
           - not_null
       - name: cruise_bk
-        description: "Clé business de la croisière"
+        description: "Clef business de la croisiere"
         tests:
           - not_null
           - unique
@@ -151,7 +147,7 @@ models:
     description: "Table hub des navires"
     columns:
       - name: vessel_hk
-        description: "Clé de hachage du navire"
+        description: "Clef de hachage du navire"
         tests:
           - not_null
           - unique
@@ -160,24 +156,24 @@ models:
         tests:
           - not_null
       - name: record_source
-        description: "Source des données"
+        description: "Source des donnees"
         tests:
           - not_null
       - name: dv_run_id
-        description: "Identifiant d'exécution"
+        description: "Identifiant d execution"
         tests:
           - not_null
       - name: vessel_bk
-        description: "Clé business du navire"
+        description: "Clef business du navire"
         tests:
           - not_null
           - unique
 
   - name: hub_item
-    description: "Table hub des éléments de réservation"
+    description: "Table hub des elements de reservation"
     columns:
       - name: item_hk
-        description: "Clé de hachage de l'élément"
+        description: "Clef de hachage de l element"
         tests:
           - not_null
           - unique
@@ -186,15 +182,15 @@ models:
         tests:
           - not_null
       - name: record_source
-        description: "Source des données"
+        description: "Source des donnees"
         tests:
           - not_null
       - name: dv_run_id
-        description: "Identifiant d'exécution"
+        description: "Identifiant d execution"
         tests:
           - not_null
       - name: item_bk
-        description: "Clé business de l'élément"
+        description: "Clef business de l element"
         tests:
           - not_null
           - unique
@@ -585,6 +581,448 @@ models:
           - not_null
       - name: eniram_vessel_bk
         description: "Business key for Eniram vessel"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_sf_booking_line_item
+    description: "Hub table for sf_booking_line_item"
+    columns:
+      - name: sf_booking_line_item_hk
+        description: "Hash key for sf_booking_line_item"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: sf_booking_line_item_bk
+        description: "Business key for sf_booking_line_item"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_erosionhorsibs
+    description: "Hub table for erosionhorsibs"
+    columns:
+      - name: erosionhorsibs_hk
+        description: "Hash key for erosionhorsibs"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: erosionhorsibs_bk
+        description: "Business key for erosionhorsibs"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_finance_rate
+    description: "Hub table for finance_rate"
+    columns:
+      - name: finance_rate_hk
+        description: "Hash key for finance_rate"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: finance_rate_bk
+        description: "Business key for finance_rate"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_flight
+    description: "Hub table for flight"
+    columns:
+      - name: flight_hk
+        description: "Hash key for flight"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: flight_bk
+        description: "Business key for flight"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_acc
+    description: "Hub table for fms_acc"
+    columns:
+      - name: fms_acc_hk
+        description: "Hash key for fms_acc"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_acc_bk
+        description: "Business key for fms_acc"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_acx
+    description: "Hub table for fms_acx"
+    columns:
+      - name: fms_acx_hk
+        description: "Hash key for fms_acx"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_acx_bk
+        description: "Business key for fms_acx"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_cruise
+    description: "Hub table for fms_cruise"
+    columns:
+      - name: fms_cruise_hk
+        description: "Hash key for fms_cruise"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_cruise_bk
+        description: "Business key for fms_cruise"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_dep
+    description: "Hub table for fms_dep"
+    columns:
+      - name: fms_dep_hk
+        description: "Hash key for fms_dep"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_dep_bk
+        description: "Business key for fms_dep"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_dem
+    description: "Hub table for fms_dem"
+    columns:
+      - name: fms_dem_hk
+        description: "Hash key for fms_dem"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_dem_bk
+        description: "Business key for fms_dem"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_epo
+    description: "Hub table for fms_epo"
+    columns:
+      - name: fms_epo_hk
+        description: "Hash key for fms_epo"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_epo_bk
+        description: "Business key for fms_epo"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_ese
+    description: "Hub table for fms_ese"
+    columns:
+      - name: fms_ese_hk
+        description: "Hash key for fms_ese"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_ese_bk
+        description: "Business key for fms_ese"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_pos
+    description: "Hub table for fms_pos"
+    columns:
+      - name: fms_pos_hk
+        description: "Hash key for fms_pos"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_pos_bk
+        description: "Business key for fms_pos"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_shp
+    description: "Table hub pour fms_shp"
+    columns:
+      - name: fms_shp_hk
+        description: "Clef de hachage pour fms_shp"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Horodatage de chargement"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Systeme source"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "ID d execution Data Vault"
+        tests:
+          - not_null
+      - name: fms_shp_bk
+        description: "Clef metier pour fms_shp"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_spa
+    description: "Table hub pour fms_spa"
+    columns:
+      - name: fms_spa_hk
+        description: "Clef de hachage pour fms_spa"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Horodatage de chargement"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Systeme source"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "ID d execution Data Vault"
+        tests:
+          - not_null
+      - name: fms_spa_bk
+        description: "Clef metier pour fms_spa"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_spr
+    description: "Table hub pour fms_spr"
+    columns:
+      - name: fms_spr_hk
+        description: "Clef de hachage pour fms_spr"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Horodatage de chargement"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Systeme source"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "ID d execution Data Vault"
+        tests:
+          - not_null
+      - name: fms_spr_bk
+        description: "Clef metier pour fms_spr"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_sscd
+    description: "Table hub pour fms_sscd"
+    columns:
+      - name: fms_sscd_hk
+        description: "Cle de hachage pour fms_sscd"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Horodatage de chargement"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Systeme source"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "ID d execution Data Vault"
+        tests:
+          - not_null
+      - name: fms_sscd_bk
+        description: "Cle metier pour fms_sscd"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_fms_ssci
+    description: "Hub table for fms_ssci"
+    columns:
+      - name: fms_ssci_hk
+        description: "Hash key for fms_ssci"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: fms_ssci_bk
+        description: "Business key for fms_ssci"
         tests:
           - not_null
           - unique
