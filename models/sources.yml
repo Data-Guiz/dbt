@@ -1,0 +1,97 @@
+version: 2
+
+sources:
+  - name: dm
+    database: dev
+    schema: dm
+    tables:
+      - name: f_facts
+
+      - name: d_booking
+
+      - name: d_group
+
+      - name: d_item
+
+      - name: d_cruise
+
+      - name: d_booking__cruise
+
+      - name: d_booking__cruise__participant
+
+      - name: d_account_b2b
+
+      - name: d_person_account
+
+      - name: d_booking_participant
+
+      - name: d_fx_proforma
+
+  - name: dwh
+    database: dev
+    schema: dwh
+    tables:
+      - name: d_financial_account
+
+  - name: dv
+    database: dev
+    schema: dv
+    tables:
+      - name: hub_booking
+      - name: hub_brand
+      - name: hub_budget_line
+      - name: hub_budget_pickup
+      - name: hub_budget_version
+      - name: hub_cabin_category
+      - name: hub_cabin
+      - name: hub_campaign
+      - name: hub_chargetype
+      - name: hub_clusteragency
+      - name: hub_configuration
+      - name: hub_contact
+      - name: hub_country
+      - name: hub_cruise_cluster
+      - name: hub_currency
+      - name: hub_discount
+      - name: hub_eniram_vessel
+      - name: hub_erosionhorsibs
+      - name: hub_finance_rate
+      - name: hub_flight
+      - name: hub_fms_acc
+      - name: hub_fms_acx
+      - name: hub_fms_cruise
+      - name: hub_fms_dep
+      - name: hub_fms_epo
+      - name: hub_fms_dem
+      - name: hub_fms_ese
+      - name: hub_fms_pos
+      - name: hub_fms_shp
+      - name: hub_fms_spa
+      - name: hub_fms_sscd
+      - name: hub_fms_ssci
+      - name: hub_fms_spr
+      - name: hub_group
+      
+
+      - name: hsat_cp_booking
+      - name: hsat_cp_product
+      - name: hsat_sf_account
+      - name: hsat_MM_cruise
+      - name: hsat_MR_cabin_number
+      - name: hsat_MR_vessel_configuration
+      
+      - name: link_cabincat__mr_cabin_number__mr_vesconfig
+      - name: link_configuration__mr_vessel__mr_vessel_configuration
+      - name: lsat_MM_cruise
+      - name: link_vessel__mr_vessel__mr_vessel_type
+      - name: link_sf_subscription__brand
+      - name: lsat_cp_booking_cruise
+      - name: link_booking__item__cruise__vessel__cabin
+
+
+
+  - name: bv
+    database: dev
+    schema: bv
+    tables:
+      - name: cp_xml_validity

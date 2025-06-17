@@ -1,0 +1,591 @@
+version: 2
+
+models:
+  - name: hub_booking
+    description: "Table hub des réservations"
+    columns:
+      - name: booking_hk
+        description: "Clef hash de la reservation"
+        tests:
+          - not_null
+          - unique
+
+      - name: load_dts
+        description: "Date de chargement"
+        tests:
+          - not_null
+
+      - name: record_source
+        description: "Source des donnees"
+        tests:
+          - not_null
+
+      - name: dv_run_id
+        description: "ID de l'execution"
+        tests:
+          - not_null
+
+      - name: booking_bk
+        description: "Clef business de la reservation"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_brand
+    description: ""
+    columns:
+      - name: brand_hk
+        description: "Clef hash"
+        tests:
+          - not_null
+          - unique
+
+      - name: load_dts
+        description: "Date de chargement"
+        tests:
+          - not_null
+
+      - name: record_source
+        description: "Source des donnees"
+        tests:
+          - not_null
+
+      - name: dv_run_id
+        description: "ID de l'execution"
+        tests:
+          - not_null
+
+      - name: brand_bk
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_sf_account
+    description: ""
+    columns:
+      - name: sf_account_hk
+        description: "Clef hash"
+        tests:
+          - not_null
+          - unique
+
+      - name: load_dts
+        description: "Date de chargement"
+        tests:
+          - not_null
+
+      - name: record_source
+        description: "Source des donnees"
+        tests:
+          - not_null
+
+      - name: dv_run_id
+        description: "ID de l'execution"
+        tests:
+          - not_null
+
+      - name: sf_account_bk
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_budget_line
+    description: "Table hub des réservations"
+    columns:
+      - name: budget_line_hk
+        description: "Clef hash"
+        tests:
+          - not_null
+          - unique
+
+      - name: load_dts
+        description: "Date de chargement"
+        tests:
+          - not_null
+
+      - name: record_source
+        description: "Source des donnees"
+        tests:
+          - not_null
+
+      - name: dv_run_id
+        description: "ID de l'execution"
+        tests:
+          - not_null
+
+      - name: budget_line_bk
+        description: "Clef"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_cruise
+    description: "Table hub des croisières"
+    columns:
+      - name: cruise_hk
+        description: "Clé de hachage de la croisière"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Date de chargement"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source des données"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Identifiant d'exécution"
+        tests:
+          - not_null
+      - name: cruise_bk
+        description: "Clé business de la croisière"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_vessel
+    description: "Table hub des navires"
+    columns:
+      - name: vessel_hk
+        description: "Clé de hachage du navire"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Date de chargement"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source des données"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Identifiant d'exécution"
+        tests:
+          - not_null
+      - name: vessel_bk
+        description: "Clé business du navire"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_item
+    description: "Table hub des éléments de réservation"
+    columns:
+      - name: item_hk
+        description: "Clé de hachage de l'élément"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Date de chargement"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source des données"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Identifiant d'exécution"
+        tests:
+          - not_null
+      - name: item_bk
+        description: "Clé business de l'élément"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_budget_pickup
+    description: "Hub table for budget pickups"
+    columns:
+      - name: budget_pickup_hk
+        description: "Hash key for budget pickup"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: budget_pickup_bk
+        description: "Business key for budget pickup"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_version
+    description: "Hub table for versions"
+    columns:
+      - name: version_hk
+        description: "Hash key for version"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: version_bk
+        description: "Business key for version"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_cabin_category
+    description: "Hub table for cabin categories"
+    columns:
+      - name: cabin_category_hk
+        description: "Hash key for cabin category"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: cabin_category_bk
+        description: "Business key for cabin category"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_cabin
+    description: "Hub table for cabins"
+    columns:
+      - name: cabin_hk
+        description: "Hash key for cabin"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: cabin_bk
+        description: "Business key for cabin"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_budget_version
+    description: "Hub table for budget versions"
+    columns:
+      - name: budget_version_hk
+        description: "Hash key for budget version"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: budget_version_bk
+        description: "Business key for budget version"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_chargetype
+    description: "Hub table for charge types"
+    columns:
+      - name: chargetype_hk
+        description: "Hash key for charge type"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: chargetype_bk
+        description: "Business key for charge type"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_clusteragency
+    description: "Hub table for cluster agencies"
+    columns:
+      - name: clusteragency_hk
+        description: "Hash key for cluster agency"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: clusteragency_bk
+        description: "Business key for cluster agency"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_configuration
+    description: "Hub table for configurations"
+    columns:
+      - name: configuration_hk
+        description: "Hash key for configuration"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: configuration_bk
+        description: "Business key for configuration"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_contact
+    description: "Hub table for contacts"
+    columns:
+      - name: contact_hk
+        description: "Hash key for contact"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: contact_bk
+        description: "Business key for contact"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_country
+    description: "Hub table for countries"
+    columns:
+      - name: country_hk
+        description: "Hash key for country"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: country_bk
+        description: "Business key for country"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_campaign
+    description: "Hub table for campaigns"
+    columns:
+      - name: campaign_hk
+        description: "Hash key for campaign"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: campaign_bk
+        description: "Business key for campaign"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_cruise_cluster
+    description: "Hub table for cruise clusters"
+    columns:
+      - name: cruise_cluster_hk
+        description: "Hash key for cruise cluster"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: cruise_cluster_bk
+        description: "Business key for cruise cluster"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_currency
+    description: "Hub table for currencies"
+    columns:
+      - name: currency_hk
+        description: "Hash key for currency"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: currency_bk
+        description: "Business key for currency"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_discount
+    description: "Hub table for discounts"
+    columns:
+      - name: discount_hk
+        description: "Hash key for discount"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: discount_bk
+        description: "Business key for discount"
+        tests:
+          - not_null
+          - unique
+
+  - name: hub_eniram_vessel
+    description: "Hub table for Eniram vessels"
+    columns:
+      - name: eniram_vessel_hk
+        description: "Hash key for Eniram vessel"
+        tests:
+          - not_null
+          - unique
+      - name: load_dts
+        description: "Load timestamp"
+        tests:
+          - not_null
+      - name: record_source
+        description: "Source system"
+        tests:
+          - not_null
+      - name: dv_run_id
+        description: "Data Vault run ID"
+        tests:
+          - not_null
+      - name: eniram_vessel_bk
+        description: "Business key for Eniram vessel"
+        tests:
+          - not_null
+          - unique
+
