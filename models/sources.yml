@@ -95,6 +95,52 @@ sources:
       - name: link_sf_subscription__brand
       - name: lsat_cp_booking_cruise
       - name: link_booking__item__cruise__vessel__cabin
+      - name: link_booking__contact
+      - name: link_booking__item
+      - name: link_booking__item__contact
+      - name: link_booking__item__contact_test_new
+      - name: link_booking__item__contact_test_old
+      - name: link_booking__item__contact__chargetype
+      - name: link_booking__item__contact__chargetype__discount
+      - name: link_booking__item__flight
+      - name: link_budget_version__budget_line
+      - name: link_cabincat__mr_cabincat__mr_vessel_config
+      - name: link_cabin_category__vessel__configuration
+      - name: link_cabin__vessel__configuration
+      - name: link_cruise__cruise_cluster
+      - name: link_currency__finance_rate
+      - name: link_fms_cruise__fms_shp
+      - name: link_fms_epo__fms_shp__fms_pos__fms_ese
+      - name: link_fms_ese__fms_shp
+      - name: link_fms_pos__fms_cruise__fms_shp__fms_dep__fms_dem
+      - name: link_fms_spa__fms_shp__fms_acc
+      - name: link_fms_spr__fms_shp__fms_dep__fms_pos__fms_spa
+      - name: link_fms_sscd__fms_ssci
+      - name: link_fms_ssci__fms_shp__fms_cruise__fms_acc
+      - name: link_group__cabin_category
+      - name: link_mm_cruise__cruise__vessel
+      - name: link_ns_currency__currency
+      - name: link_ns_currency__ns_currency
+      - name: link_ns_transaction__ns_transaction_line
+      - name: link_sf_account__sf_user
+      - name: link_sf_booking_line_item__sf_opportunity
+      - name: link_sf_campaign__campaign__sf_user
+      - name: link_sf_campaignmember__sf_campaign
+      - name: link_sf_case__sf_user__sf_recordtype
+      - name: link_sf_commercial_gesture__sf_account
+      - name: link_sf_commercial_gesture__sf_case__sf_account
+      - name: link_sf_contact__sf_account__sf_user
+      - name: link_sf_cruise_scope__campaign
+      - name: link_sf_deleted_campaign_members__sf_campaignmember
+      - name: link_sf_event__sf_user
+      - name: link_sf_event__sf_user__sf_recordtype
+      - name: link_sf_household__sf_account__sf_account
+      - name: link_sf_kardex__kardex__sf_account__sf_user
+      - name: link_sf_lead__sf_user
+      - name: link_sf_passenger_roles__sf_opportunity__sf_account
+      - name: link_sf_task__sf_user
+      - name: link_sf_task__sf_user__sf_recordtype
+      - name: link_vessel__configuration
 
 
 
