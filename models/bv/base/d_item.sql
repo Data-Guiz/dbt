@@ -118,7 +118,7 @@ WITH cruise_items AS (
             sat_cabin_cat.cabin_total_cabin_code_ibs_equiv,
             sat_cabin_cat.cabin_code_pricing,
             sat_cabin_cat.room_name,
-            sat_cabin_cat.cabin_category_hk,
+            sat_cabin_cat.mr_cabin_category_hk,
             sat_cabin_cat.mr_vessel_configuration_hk
         FROM {{ source('dv', 'link_cabincat__mr_cabincat__mr_vessel_config') }} l_ccv
         INNER JOIN {{ source('dv', 'hsat_mr_cabin_category') }} sat_cabin_cat 
@@ -126,7 +126,7 @@ WITH cruise_items AS (
             AND sat_cabin_cat.load_end_dts = '9999-12-31'
             AND sat_cabin_cat.del_flag = FALSE
     ) sat_cabin_cat
-        ON sat_cabin_cat.cabin_category_hk = cabin_category.cabin_category_hk
+        ON sat_cabin_cat.mr_cabin_category_hk = cabin_category.cabin_category_hk
         AND sat_cabin_cat.mr_vessel_configuration_hk = vessel_config_cabin.mr_vessel_configuration_hk
 )
 
