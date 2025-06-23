@@ -106,6 +106,7 @@ sources:
       - name: hub_ns_transaction
       - name: hub_ns_transaction_line
       - name: hub_vessel
+      - name: hub_cabin_cp__mm__mr
 
       
       - name: link_cabincat__mr_cabin_number__mr_vesconfig
