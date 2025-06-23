@@ -26,7 +26,7 @@ WITH source_data AS (
         ,capacity_pax::INTEGER AS capacity_pax
         ,nb_pax_adult::INTEGER AS nb_pax_adult
         ,nb_pax_additional::INTEGER AS nb_pax_additional
-    FROM {{ source('dv', 'hsat_MR_cabin_number') }}
+    FROM {{ source('dv', 'hsat_mr_cabin_number') }}
 )
 
 SELECT * FROM source_data 

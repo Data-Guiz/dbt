@@ -19,7 +19,7 @@ WITH source_data AS (
         ,editor::VARCHAR(30) AS editor
         ,start_date::DATE AS start_date
         ,end_date::DATE AS end_date
-    FROM {{ source('dv', 'hsat_MR_vessel_configuration') }}
+    FROM {{ source('dv', 'hsat_mr_vessel_configuration') }}
 )
 
 SELECT * FROM source_data 
