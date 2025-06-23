@@ -205,3 +205,4 @@ sources:
     schema: bv
     tables:
       - name: cp_xml_validity
+      - name: hub_cabin_cp__mm__mr
