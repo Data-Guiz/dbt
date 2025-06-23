@@ -50,6 +50,7 @@ sources:
       - name: hub_configuration
       - name: hub_contact
       - name: hub_country
+      - name: hub_cruise
       - name: hub_cruise_cluster
       - name: hub_currency
       - name: hub_discount
@@ -104,7 +105,7 @@ sources:
       - name: hub_ns_currency
       - name: hub_ns_transaction
       - name: hub_ns_transaction_line
-      - name: hub_cuise
+      - name: hub_vessel
 
       
       - name: link_cabincat__mr_cabin_number__mr_vesconfig
