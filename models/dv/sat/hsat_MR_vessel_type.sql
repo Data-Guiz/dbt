@@ -1,13 +1,13 @@
-{{
-    config(
-        materialized='table',
-        schema='dv'
-    )
-}}
+{{ config(
+    materialized='table',
+    schema='dv',
+    database='dev',
+    tags=['sat']
+) }}
 
 WITH source_data AS (
     SELECT
-        mr_vessel_configuration_hk::CHAR(40) AS mr_vessel_configuration_hk
+        mr_vessel_type_hk::CHAR(40) AS mr_vessel_type_hk
         ,load_dts::TIMESTAMP AS load_dts
         ,load_end_dts::TIMESTAMP AS load_end_dts
         ,del_flag::BOOLEAN AS del_flag
@@ -17,9 +17,8 @@ WITH source_data AS (
         ,creation_timestamp::TIMESTAMP AS creation_timestamp
         ,edition_timestamp::TIMESTAMP AS edition_timestamp
         ,editor::VARCHAR(30) AS editor
-        ,start_date::DATE AS start_date
-        ,end_date::DATE AS end_date
-    FROM {{ source('dv', 'hsat_MR_vessel_configuration') }}
+        ,vessel_type::VARCHAR(30) AS vessel_type
+		,competitor::VARCHAR(5) AS competitor
+    FROM {{ source('dv', 'hsat_mr_vessel_type') }}
 )
-
-SELECT * FROM source_data 
+SELECT * FROM source_data

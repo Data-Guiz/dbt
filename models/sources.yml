@@ -6,6 +6,32 @@ sources:
     schema: dwh
     tables:
       - name: d_financial_account
+  
+  - name: dm
+    database: dev
+    schema: dm
+    tables:
+      - name: f_facts
+
+      - name: d_booking
+
+      - name: d_group
+
+      - name: d_item
+
+      - name: d_cruise
+
+      - name: d_booking__cruise
+
+      - name: d_booking__cruise__participant
+
+      - name: d_account_b2b
+
+      - name: d_person_account
+
+      - name: d_booking_participant
+
+      - name: d_fx_proforma
 
   - name: dv
     database: dev
@@ -79,14 +105,7 @@ sources:
       - name: hub_ns_transaction
       - name: hub_ns_transaction_line
       - name: hub_cuise
-      
 
-      - name: hsat_cp_booking
-      - name: hsat_cp_product
-      - name: hsat_sf_account
-      - name: hsat_MM_cruise
-      - name: hsat_MR_cabin_number
-      - name: hsat_MR_vessel_configuration
       
       - name: link_cabincat__mr_cabin_number__mr_vesconfig
       - name: link_configuration__mr_vessel__mr_vessel_configuration
@@ -141,6 +160,42 @@ sources:
       - name: link_sf_task__sf_user
       - name: link_sf_task__sf_user__sf_recordtype
       - name: link_vessel__configuration
+
+      
+
+      - name: hsat_cp_booking
+      - name: hsat_cp_product
+      - name: hsat_sf_account
+      - name: hsat_MM_cruise
+      - name: hsat_MR_cabin_number
+      - name: hsat_MR_vessel_configuration
+      - name: hsat_Eniram_VesselList
+      - name: hsat_cp_groupcontractinfo
+      - name: hsat_cp_bookingstatusdate
+      - name: hsat_cp_bookingstatus
+      - name: hsat_cp_booking_participant_followup
+      - name: hsat_cp_product_theme
+      - name: hsat_FMS_acc
+      - name: hsat_sf_account_staging
+      - name: hsat_sf_campaign
+      - name: hsat_sf_campaignmember
+      - name: hsat_sf_campaignsource
+      - name: hsat_sf_case
+      - name: hsat_sf_commercial_gesture
+      - name: hsat_sf_contact
+      - name: hsat_sf_cruise_scope
+      - name: hsat_sf_deleted_campaign_members
+      - name: hsat_sf_event
+      - name: hsat_sf_household
+      - name: hsat_sf_kardex
+      - name: hsat_sf_lead
+      - name: hsat_sf_opportunity
+      - name: hsat_sf_passenger_roles
+      - name: hsat_sf_recordtype
+      - name: hsat_sf_subscription
+      - name: hsat_sf_task
+      - name: hsat_sf_user
+      - name: hsat_sf_voiture
 
 
 
