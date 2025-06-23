@@ -168,6 +168,7 @@ sources:
       - name: hsat_sf_account
       - name: hsat_MM_cruise
       - name: hsat_MR_cabin_number
+      - name: hsat_MR_cabin_category
       - name: hsat_MR_vessel_configuration
       - name: hsat_Eniram_VesselList
       - name: hsat_cp_groupcontractinfo
