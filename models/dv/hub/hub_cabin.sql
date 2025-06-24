@@ -1,9 +1,7 @@
 {{
     config(
         materialized='table',
-        schema='dv',
-        dist='cabin_hk',
-        sort=['cabin_hk', 'cabin_bk']
+        schema='dv'
     )
 }}
 
