@@ -4,6 +4,7 @@
     )
 }}
 
+
 WITH cruise_items AS (
     SELECT
         -- key

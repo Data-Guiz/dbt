@@ -3,6 +3,7 @@
         materialized='table'
     )
 }}
+
 with cp_mm as (
     select
         hub_cabin.cabin_hk,

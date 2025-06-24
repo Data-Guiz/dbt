@@ -4,5 +4,6 @@
     )
 }}
 
-Select *
-From {{ source('bv', 'cp_xml_validity') }}
+SELECT 
+*
+FROM {{ source('bv', 'cp_xml_validity') }}
