@@ -402,3 +402,5 @@ FROM
 	LEFT JOIN {{ ref('d_fx_proforma') }} fx_proforma
 		ON facts.local_currency = fx_proforma.currency
 WHERE facts.type NOT IN ('Activity','CRM Hierarchy', 'Charge Override', 'ROI Campaign', 'Cabin Deleted', 'Lead Transformation')
+
+

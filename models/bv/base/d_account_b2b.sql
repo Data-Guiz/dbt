@@ -4,4 +4,5 @@
     )
 }}
 
-SELECT * FROM {{ source('dm', 'd_account_b2b') }} 
+SELECT * 
+FROM {{ source('dm', 'd_account_b2b') }} 

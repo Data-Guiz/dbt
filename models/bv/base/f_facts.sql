@@ -4,4 +4,5 @@
     )
 }}
 
-SELECT * FROM {{ source('dm', 'f_facts') }} 
+SELECT * 
+FROM {{ source('dm', 'f_facts') }} 

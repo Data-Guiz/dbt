@@ -4,4 +4,5 @@
     )
 }}
 
-SELECT * FROM {{ source('dm', 'd_fx_proforma') }} 
+SELECT * 
+FROM {{ source('dm', 'd_fx_proforma') }} 
