@@ -5,6 +5,7 @@
     )
 }}
 
+
 WITH source_data AS (
     SELECT 
         booking_hk::CHAR(40) AS booking_hk,
