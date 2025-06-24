@@ -1,8 +1,7 @@
 {{ 
   config(
     materialized='view',
-    schema='wrk',
-    alias='cp_xml_validity_vw'
+    schema='wrk'
   ) 
 }}
 

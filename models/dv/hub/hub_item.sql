@@ -1,10 +1,7 @@
 {{
     config(
         materialized='table',
-        schema='dv',
-        dist='KEY',
-        dist_key='item_hk',
-        sort=['item_hk', 'item_bk']
+        schema='dv'
     )
 }}
 
