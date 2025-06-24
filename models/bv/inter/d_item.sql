@@ -128,7 +128,7 @@ WITH cruise_items AS (
             AND sat_cabin_cat.del_flag = FALSE
     ) sat_cabin_cat
         ON sat_cabin_cat.mr_cabin_category_hk = cabin_category.cabin_category_hk
-        AND l_ccv.mr_vessel_configuration_hk = vessel_config_cabin.mr_vessel_configuration_hk
+        AND sat_cabin_cat.mr_vessel_configuration_hk = vessel_config_cabin.mr_vessel_configuration_hk
 )
 
 SELECT * FROM cruise_items 
