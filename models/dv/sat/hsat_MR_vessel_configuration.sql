@@ -5,6 +5,7 @@
     )
 }}
 
+
 WITH source_data AS (
     SELECT
         mr_vessel_configuration_hk::CHAR(40) AS mr_vessel_configuration_hk
